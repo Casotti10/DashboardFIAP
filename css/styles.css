@@ -1,0 +1,143 @@
+/* Corpo */
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #F2F7FD;
+  font-family: 'Helvetica', sans-serif;
+  padding-bottom: 70px; /* espaço pro menu inferior */
+}
+
+
+
+body {
+  background-color: #F2F7FD;
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Título */
+.titulo-home {
+  color: #3B6FD1;
+  font-weight: bold;
+}
+
+/* Ícone do perfil */
+.icon-perfil {
+  color: #3B6FD1;
+}
+
+/* Cards */
+.card-custom {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Texto */
+.label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.valor-principal {
+  color: #3B6FD1;
+  font-weight: bold;
+}
+
+.valor-receita {
+  color: #73B761;
+  font-weight: bold;
+}
+
+.valor-despesa {
+  color: #DE0000;
+  font-weight: bold;
+}
+
+.valor-balanço {
+  color: #875AC0;
+  font-weight: bold;
+}
+
+/* Categorias */
+.categoria-label {
+  color: #555;
+}
+
+.categoria-valor {
+  color: #3B6FD1;
+  font-weight: bold;
+}
+
+/* Seções */
+.section-title {
+  color: #3B6FD1;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Ícones */
+.icon-receita {
+  color: #73B761;
+  font-size: 2.2rem;
+}
+
+.icon-despesa {
+  color: #DE0000;
+  font-size: 2.2rem;
+}
+
+.icon-categoria {
+  color: #FFC107;
+  font-size: 3.5rem;
+  margin-right: 15px;
+}
+
+/* Navbar inferior */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav .nav-item {
+  text-decoration: none;
+  color: #3B6FD1;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.bottom-nav .nav-item i {
+  font-size: 1.8rem;
+}
+
+.bottom-nav .nav-item:hover {
+  color: #73B761;
+}
+
+/* Botão central */
+.bottom-nav .btn-add {
+  background-color: #3B6FD1;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  transform: translateY(-20%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-nav .btn-add i {
+  font-size: 2.2rem;
+}
+
+.bottom-nav .btn-add:hover {
+  background-color: #73B761;
+  color: white;
+}
