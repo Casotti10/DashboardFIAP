@@ -10,88 +10,104 @@ body, html {
 
 
 
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #F2F7FD;
-  font-family: 'Helvetica', sans-serif;
+  background-color: #f5f8fd;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
 }
 
 /* Título */
 .titulo-home {
-  color: #3B6FD1;
+  font-size: 1.8rem;
   font-weight: bold;
+  color: #3b6fd1;
 }
 
-/* Ícone do perfil */
+.titulo-home span {
+  color: #3b6fd1;
+}
+
+/* Ícone de perfil */
 .icon-perfil {
-  color: #3B6FD1;
+  color: #3b6fd1;
+  cursor: pointer;
 }
 
 /* Cards */
 .card-custom {
-  background-color: white;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Texto */
+/* Labels e valores */
 .label {
-  color: #888;
   font-size: 0.9rem;
-}
-
-.valor-principal {
-  color: #3B6FD1;
-  font-weight: bold;
-}
-
-.valor-receita {
-  color: #73B761;
-  font-weight: bold;
-}
-
-.valor-despesa {
-  color: #DE0000;
-  font-weight: bold;
-}
-
-.valor-balanço {
-  color: #875AC0;
-  font-weight: bold;
-}
-
-/* Categorias */
-.categoria-label {
   color: #555;
 }
 
-.categoria-valor {
-  color: #3B6FD1;
+.valor-principal {
+  font-size: 2rem;
   font-weight: bold;
+  color: #2ecc71;
 }
 
-/* Seções */
-.section-title {
-  color: #3B6FD1;
+.valor-receita {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.valor-despesa {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.valor-balanço {
+  color: #3b6fd1;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 
 /* Ícones */
 .icon-receita {
-  color: #73B761;
-  font-size: 2.2rem;
+  color: #2ecc71;
+  font-size: 1.8rem;
 }
 
 .icon-despesa {
-  color: #DE0000;
-  font-size: 2.2rem;
+  color: #e74c3c;
+  font-size: 1.8rem;
 }
 
 .icon-categoria {
-  color: #FFC107;
-  font-size: 3.5rem;
-  margin-right: 15px;
+  color: #3b6fd1;
+  font-size: 3.3rem;
+  margin-right: 10px;
+}
+
+/* Categoria */
+.categoria-label {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.categoria-valor {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Seções */
+.section-title {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #3b6fd1;
 }
 
 /* Navbar inferior */
@@ -100,44 +116,75 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
+  padding: 6px 0;
+  z-index: 999;
 }
 
 .bottom-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3b6fd1;
   text-decoration: none;
-  color: #3B6FD1;
-  text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .bottom-nav .nav-item i {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
-.bottom-nav .nav-item:hover {
-  color: #73B761;
-}
-
-/* Botão central */
 .bottom-nav .btn-add {
-  background-color: #3B6FD1;
+  background-color: #3b6fd1;
   color: white;
   border-radius: 50%;
   padding: 10px;
-  transform: translateY(-20%);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: -25px;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.bottom-nav .btn-add i {
-  font-size: 2.2rem;
+/* --------------------------
+   RESPONSIVIDADE
+---------------------------*/
+
+/* Telas maiores (tablet e desktop) */
+@media (min-width: 768px) {
+  .titulo-home {
+    font-size: 2.2rem;
+  }
+
+  .valor-principal {
+    font-size: 2.5rem;
+  }
+
+  .icon-receita,
+  .icon-despesa {
+    font-size: 2rem;
+  }
+
+  .bottom-nav .nav-item {
+    font-size: 0.9rem;
+  }
+
+  .bottom-nav .nav-item i {
+    font-size: 1.6rem;
+  }
+
+  .card-custom {
+    padding: 24px;
+  }
+
+  .icon-categoria {
+    font-size: 1.8rem;
+  }
 }
 
-.bottom-nav .btn-add:hover {
-  background-color: #73B761;
-  color: white;
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
 }
