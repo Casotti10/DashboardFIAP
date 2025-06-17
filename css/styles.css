@@ -3,91 +3,84 @@ body, html {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #F2F7FD;
-  font-family: 'Helvetica', sans-serif;
-  padding-bottom: 70px; /* espaço pro menu inferior */
+  background-color: #0F172A;
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 70px;
+  color: #F8FAFC;
 }
 
-
-
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f5f8fd;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-}
-
 /* Título */
 .titulo-home {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #3b6fd1;
+  color: #38BDF8;
 }
 
 .titulo-home span {
-  color: #3b6fd1;
+  color: #38BDF8;
 }
 
 /* Ícone de perfil */
 .icon-perfil {
-  color: #3b6fd1;
+  color: #22C55E;
   cursor: pointer;
 }
 
 /* Cards */
 .card-custom {
-  background-color: #fff;
+  background-color: #1E293B;
   border-radius: 16px;
   padding: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 /* Labels e valores */
 .label {
   font-size: 0.9rem;
-  color: #555;
+  color: #CBD5E1;
 }
 
 .valor-principal {
   font-size: 2rem;
   font-weight: bold;
-  color: #2ecc71;
+  color: #22C55E;
 }
 
 .valor-receita {
-  color: #2ecc71;
+  color: #22C55E;
   font-weight: 600;
 }
 
 .valor-despesa {
-  color: #e74c3c;
+  color: #EF4444;
   font-weight: 600;
 }
 
 .valor-balanço {
-  color: #3b6fd1;
+  color: #38BDF8;
   font-weight: bold;
 }
 
 /* Ícones */
 .icon-receita {
-  color: #2ecc71;
+  color: #22C55E;
   font-size: 1.8rem;
 }
 
 .icon-despesa {
-  color: #e74c3c;
+  color: #EF4444;
   font-size: 1.8rem;
 }
 
 .icon-categoria {
-  color: #3b6fd1;
+  color: #38BDF8;
   font-size: 3.3rem;
   margin-right: 10px;
 }
@@ -95,19 +88,19 @@ body {
 /* Categoria */
 .categoria-label {
   font-size: 0.95rem;
-  color: #555;
+  color: #E2E8F0;
 }
 
 .categoria-valor {
   font-weight: bold;
-  color: #333;
+  color: #F8FAFC;
 }
 
 /* Seções */
 .section-title {
   margin-bottom: 8px;
   font-weight: bold;
-  color: #3b6fd1;
+  color: #38BDF8;
 }
 
 /* Navbar inferior */
@@ -116,8 +109,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
+  background-color: #1E293B;
+  border-top: 1px solid #334155;
   display: flex;
   justify-content: space-around;
   padding: 6px 0;
@@ -128,7 +121,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #3b6fd1;
+  color: #38BDF8;
   text-decoration: none;
   font-size: 0.75rem;
 }
@@ -138,20 +131,127 @@ body {
 }
 
 .bottom-nav .btn-add {
-  background-color: #3b6fd1;
+  background-color: #38BDF8;
   color: white;
   border-radius: 50%;
   padding: 10px;
   margin-top: -25px;
   font-size: 1.8rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+} 
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #334155;
+  padding: 20px 10px;
+  color: white;
+  transition: all 0.3s;
+  z-index: 1000;
+  overflow: hidden;
 }
+
+.sidebar.close {
+  width: 70px;
+}
+
+.titulo-sidebar {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.sidebar.close .titulo-sidebar {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.sidebar .nav-link {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #2A53A3;
+  border-radius: 8px;
+  padding-left: 10px;
+  transition: 0.3s;
+}
+
+.sidebar .nav-link i {
+  font-size: 1.2rem;
+}
+
+.sidebar.close .nav-link span {
+  display: none;
+}
+
+/* Botão de abrir/fechar menu */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 230px;
+  font-size: 1.8rem;
+  color: #3B6FD1;
+  cursor: pointer;
+  z-index: 1100;
+  transition: 0.3s;
+}
+
+.sidebar.close ~ .menu-toggle {
+  left: 80px;
+}
+
+/* Ajuste do conteúdo quando sidebar abre ou fecha */
+body {
+  margin-left: 220px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.close ~ body {
+  margin-left: 70px;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -220px;
+  }
+
+  .sidebar.open {
+    left: 0;
+    width: 220px;
+  }
+
+  .sidebar.close {
+    left: -220px;
+  }
+
+  .menu-toggle {
+    left: 20px;
+  }
+
+  body {
+    margin-left: 0;
+  }
+}
+
 
 /* --------------------------
    RESPONSIVIDADE
 ---------------------------*/
 
-/* Telas maiores (tablet e desktop) */
 @media (min-width: 768px) {
   .titulo-home {
     font-size: 2.2rem;
